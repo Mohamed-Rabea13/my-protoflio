@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background :#111;
+    color:white;
+    transition:0.4s;
+}
+
+header{
+    background:#3c48cf;
+    padding:20px;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+.hero{
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+span{
+    color:#00bfff;
+}
+
+button{
+    margin-top:20px;
+    padding:10px 20px;
+    border:none;
+    background:#8d3232;
+    color:white;
+    cursor:pointer;
+    border-radius:8px;
+}
+
+section{
+    padding:60px 10%;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#8d3232;
+    padding:25px;
+    text-align:center;
+    border-radius:10px;
+    transition:.3s;
+    
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    background:#00bfff;
+}
+
+.project{
+    background:#8d3232;
+    margin:20px 0;
+    padding:20px;
+    border-radius:10px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#3c48cf;
+}
+
+.light{
+    background:#f4f4f4;
+    color:#111;
+}
+
+.light header,
+.light footer{
+    background:white;
+}
+
+.light nav a{
+    color:#111;
+}
+
+.light .card,
+.light .project{
+    background:#ddd;
+}
+img{
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+    
+    
+}
+.click{
+    
+    text-align: center;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <h2>Mohamed Rabea sadek</h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <h1>Hello, I'm <span>Mohamed Rabea </span></h1>
+    <h3>Cybersecurity Student & Front-End Developer</h3>
+    <button id="modeBtn">🌙 Dark Mode</button>
+</section>
+     <img id="photo" src="badlah.jpg"  >
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am passionate about Cybersecurity and Web Development.
+        I enjoy building websites and learning ethical hacking.
+
+    </p>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="cards">
+        <a href="https://www.w3schools.com/html/default.asp" class="card" style="color: white; text-decoration: none;" target="_blank">HTML</a>
+        <a href="https://www.w3schools.com/css/default.asp" class="card" style="color: white; text-decoration: none;" target="_blank">CSS</a>
+        <a href="https://www.w3schools.com/js/default.asp" class="card" style="color: white; text-decoration: none;" target="_blank">JavaScript</a>
+        <a href="https://www.w3schools.com/bootstrap/bootstrap_ver.asp" class="card" style="color: white; text-decoration: none;" target="_blank">Bootstrab</a>
+        <a href="https://www.w3schools.com/react/default.asp" class="card" style="color: white; text-decoration: none;" target="_blank">React</a>
+        <a href="https://www.w3schools.com/python/default.asp" class="card"  target="_blank" style="color: white; text-decoration: none;">Python</a>
+    </div>
+</section>
+
+<section id="projects">
+      <h2>Projects</h2>
+      <div class="project">
+      <h3 class="click">
+                         <a href="c:\Users\DELL\OneDrive\Desktop\projects\protofilo.html" target="_blank" style="color: rgb(87, 234, 99);"> Portfolio Website</a>
+     </h3>
+     <br>
+            <p>Responsive portfolio using HTML, CSS and JavaScript.</p>
+    </div>
+
+    <div class="project">
+
+        <h3 class="click">
+                           <a href="c:\Users\DELL\OneDrive\Desktop\projects\login.html" target="_blank" style="color: rgb(87, 234, 99);">Login Page</a>
+        </h3>
+         <br>
+             <p>Modern login page with validation.</p>
+
+    </div>
+
+</section>
+
+<section id="contact">
+
+    <h2>Contact Me</h2>
+    <button >
+              <a href="mailto:mr1511413@gmail.com" style="color: white; font-size: large;">Email</a>
+    </button>
+    <br>
+    <button class="enter"> 
+              <a href="https://www.facebook.com/share/1HQNhPjrWh/" style="color: white; font-size: large;"> facebook</a>
+    </button>
+    <br>
+
+   <button >
+               <a href="tel:01023571935" style="color: white; font-size: large;">01023571935</a>
+   </button>
+
+   </section>
+   
+   <footer>
+             <p>© 2026 Mohamed Rabea. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+    const btn = document.getElementById("modeBtn");
+
+btn.addEventListener("click", () => {
+    document.body.classList.toggle("light");
+
+    if(document.body.classList.contains("light")){
+        btn.innerHTML = "☀️ Light Mode";
+    }else{
+        btn.innerHTML = "🌙 Dark Mode";
+    }
+});
+    </script>
+
+</body>
+</html>
