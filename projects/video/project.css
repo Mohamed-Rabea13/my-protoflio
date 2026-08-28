@@ -1,0 +1,88 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#1b1c1f;
+/* background-image: url(alex.jpg);
+background-repeat: no-repeat;
+background-size: cover; */
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.player{
+width:850px;
+background:#1f2b44;
+/* background-image: url(car.jpg);
+background-repeat: no-repeat;
+background-size: cover; */
+
+padding:20px;
+border-radius:15px;
+box-shadow:0 0 15px rgba(0,0,0,.4);
+}
+
+h2{
+text-align:center;
+color:white;
+margin-bottom:20px;
+}
+
+video{
+background:black;
+border-radius:10px;
+height:520px;
+}
+
+.buttons{
+margin:20px 0;
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+button{
+background:#06070a;
+color:white;
+border:none;
+padding:12px 18px;
+border-radius:8px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0f55ff;
+}
+
+input[type=range]{
+width:100%;
+margin:10px 0;
+accent-color:#26509e;
+}
+
+label{
+color:white;
+display:block;
+margin-top:10px;
+}
+
+.sizes{
+text-align:center;
+margin-top:15px;
+}
+
+.time{
+display:flex;
+justify-content:space-between;
+color:white;
+margin-top:15px;
+font-size:22px;
+font-weight:bold;
+}

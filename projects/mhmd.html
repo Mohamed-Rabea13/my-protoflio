@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio </title>
+<style>
+    *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#222;
+}
+
+.container{
+display:grid;
+grid-template-columns:260px 1fr;
+min-height:100vh;
+}
+
+.sidebar{
+background:#fff;
+padding:30px;
+}
+
+.logo{
+font-size:60px;
+font-weight:bold;
+margin-bottom:40px;
+}
+
+.menu{
+list-style:none;
+margin-bottom:40px;
+}
+
+.menu li{
+padding:10px 0;
+cursor:pointer;
+}
+
+
+.text{
+color:#666;
+line-height:1.6;
+}
+
+main{
+padding:20px;
+}
+
+.filter{
+background:#c7b37d;
+padding:15px;
+display:flex;
+gap:10px;
+}
+
+.filter button{
+background:none;
+border:none;
+color:white;
+padding:10px 20px;
+cursor:pointer;
+font-size:16px;
+}
+
+.filter .active{
+background:white;
+color:black;
+border-radius:4px;
+}
+
+.gallery{
+margin-top:20px;
+
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+
+gap:10px;
+}
+
+.item{
+overflow:hidden;
+height:220px;
+}
+
+.item img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.4s;
+cursor:pointer;
+}
+
+.item:hover img{
+transform:scale(1.1);
+}
+.side_photo{
+    width: 60px;
+    height: 70px;
+    margin-top: 10px;
+}
+
+.head{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+      .icons {
+        display: flex;
+        gap: 15px;
+        margin: 25px 0;
+        color: #888;
+        font-size: 18px;
+        color: #d7c889;
+        cursor: pointer;
+      }
+
+
+
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    
+    <aside class="sidebar">
+        <h1 class="logo">iNK</h1>
+
+        <ul class="menu">
+            <li>Portfolio</li>
+            <li>About Us</li>
+            <li>Blog</li>
+            <li>Contact</li>
+        </ul>
+        <div class="icons">
+          <i class="fa-solid fa-globe"></i>
+
+          <i class="fa-brands fa-twitter"></i>
+
+          <i class="fa-brands fa-vimeo-v"></i>
+        </div>
+
+
+
+        <h3 class="head">A Text Widget</h3>
+        
+
+        <p class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        
+        <h3 class="head" >Fliker</h3>
+        <div>
+        <img src="img/1.jpeg" class="side_photo">
+        <img src="img/0.jpeg" class="side_photo">
+        <img src="img/2.jpeg" class="side_photo">
+        <img src="img/car.jpg" class="side_photo">
+        <img src="img/badlah.jpg" class="side_photo">
+        <img src="img/alex.jpg" class="side_photo">
+        </div>
+    </aside>
+
+    
+    <main>
+
+        <div class="filter">
+            <button class="active" data-filter="all">All</button>
+            <button data-filter="design">Design</button>
+            <button data-filter="photo">Photography</button>
+            <button data-filter="print">Print</button>
+        </div>
+
+        <div class="gallery">
+
+            <div class="item design">
+                <img src="img/1.jpeg">
+            </div>
+
+            <div class="item photo">
+                <img src="img/2.jpeg">
+            </div>
+
+            <div class="item print">
+                <img src="img/3.jpeg">
+            </div>
+
+            <div class="item design">
+                <img src="img/4.jpeg">
+            </div>
+
+            <div class="item photo">
+                <img src="img/5.jpeg">
+            </div>
+
+            <div class="item print">
+                <img src="img/6.jpeg">
+            </div>
+
+            <div class="item design">
+                <img src="img/7.jpeg">
+            </div>
+
+            <div class="item photo">
+                <img src="img/8.jpeg">
+            </div>
+
+            <div class="item design">
+                <img src="img/9.jpeg">
+            </div>   
+
+        </div>
+
+    </main>
+
+</div>
+
+<script >
+    let buttons = document.querySelectorAll(".filter button");
+let items = document.querySelectorAll(".item");
+
+buttons.forEach(button=>{
+
+button.addEventListener("click",()=>{
+
+buttons.forEach(btn=>btn.classList.remove("active"));
+button.classList.add("active");
+
+let filter = button.dataset.filter;
+
+items.forEach(item=>{
+
+if(filter==="all"){
+item.style.display="block";
+}
+else if(item.classList.contains(filter)){
+item.style.display="block";
+}
+else{
+item.style.display="none";
+}
+
+});
+
+});
+
+});
+</script>
+
+</body>
+</html>
